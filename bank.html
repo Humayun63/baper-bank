@@ -1,18 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Baper Bank</title>
-        <!-- TAILWIND CSS CDN -->
-        <script src="https://cdn.tailwindcss.com"></script>
-    </head>
-    <body>
-        
-        <!-- OUR SCRIPT FILES -->
-        <script src="js/utilities.js"></script>
-        <script src="js/deposit.js"></script>
-        <script src="js/withdraw.js"></script>
-    </body>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baper Bank</title>
+    <!-- TAILWIND CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <header>
+        <h1 class="text-5xl text-center my-4">Welcome To <span class="font-semibold text-violet-700">Baper Bank!</span>
+        </h1>
+    </header>
+    <main>
+        <section class="mt-8 mx-2">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 w-full md:w-3/4 md:mx-auto">
+                <div class="bg-amber-400 p-4 rounded-lg">
+                    <h3 class="text-2xl text-white my-2">Total Deposit</h3>
+                    <p class="text-3xl text-white font-bold">$<span id="deposit">00</span></p>
+                </div>
+                <div class="bg-violet-400 p-4 rounded-lg">
+                    <h3 class="text-2xl text-white my-2">Total Withdraw</h3>
+                    <p class="text-3xl text-white font-bold">$<span id="withdraw">00</span></p>
+                </div>
+                <div class="bg-sky-400 p-4 rounded-lg">
+                    <h3 class="text-2xl text-white my-2">Total Balance</h3>
+                    <p class="text-3xl text-white font-bold">$<span id="balance">1240</span></p>
+                </div>
+            </div>
+        </section>
+        <section class="mt-8 mx-2">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 w-full md:w-3/4 md:mx-auto">
+                <div class="bg-red-400 p-4 rounded-lg">
+                    <h3 class="text-2xl text-white my-2">Enter Deposit Amount</h3>
+                    <input type="number" name="deposit" id="deposit-filed"
+                        class="w-full md:w-3/4 block px-3 py-1 rounded-sm outline-0" placeholder="$ Your Deposit Amount">
+                    <button id="deposit-btn"
+                        class="bg-sky-700 outline-0 text-white px-8 py-2 mt-2 rounded-xl font-medium hover:bg-sky-500">Deposit</button>
+                </div>
+                <div class="bg-orange-400 p-4 rounded-lg">
+                    <h3 class="text-2xl text-white my-2">Enter Withdraw Amount</h3>
+                    <input type="number" name="withdraw" id="withdraw-filed"
+                        class="w-full md:w-3/4 block px-3 py-1 rounded-sm outline-0" placeholder="$ Your Withdraw Amount">
+                    <button id="withdraw-btn"
+                        class="bg-sky-700 outline-0 text-white px-8 py-2 mt-2 rounded-xl font-medium hover:bg-sky-500">Withdraw</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- OUR SCRIPT FILES -->
+    <script src="js/utilities.js"></script>
+    <script src="js/deposit.js"></script>
+    <script src="js/withdraw.js"></script>
+</body>
+
 </html>
